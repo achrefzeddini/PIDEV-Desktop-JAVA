@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.AddGroupScreenController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/addgroup.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="150.0" layoutY="95.0" opacity="0.9" prefHeight="211.0" prefWidth="300.0" style="-fx-background-color: #081226; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="32.0" layoutY="25.0" text="Group name" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="NameGroup" layoutX="20.0" layoutY="49.0" prefHeight="30.0" prefWidth="260.0" promptText="Enter group name ..." style="-fx-background-color: #FfF; -fx-background-radius: 20;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="32.0" layoutY="82.0" text="Group type" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TypeGroup" layoutX="20.0" layoutY="106.0" prefHeight="30.0" prefWidth="260.0" promptText="Enter group type..." style="-fx-background-color: #FfF; -fx-background-radius: 20;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="AddGroupUser" layoutX="20.0" layoutY="157.0" mnemonicParsing="false" onAction="#addGroup" prefHeight="25.0" prefWidth="260.0" style="-fx-background-color: #032CA6; -fx-background-radius: 20;" text="Add group" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

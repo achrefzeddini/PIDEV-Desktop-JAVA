@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="626.0" maxWidth="948.0" prefHeight="626.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.UserAnimalController">
+   <children>
+      <TableView fx:id="tablev" layoutX="-24.0" layoutY="175.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="339.0" prefWidth="582.0" style="-fx-background-radius: 20; -fx-background-color: efeaea; -fx-fixed-cell-size: 1080px;">
+        <columns>
+            <TableColumn fx:id="coln" prefWidth="43.0" text="Ref" />
+          <TableColumn fx:id="colr" prefWidth="69.0" text="Race" />
+          <TableColumn fx:id="cols" prefWidth="71.0" text="Season" />
+            <TableColumn fx:id="colp" minWidth="4.0" prefWidth="74.0" text="Place" />
+            <TableColumn fx:id="colpic" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="256.0" text="Picture" />
+            <TableColumn fx:id="colhunted" minWidth="4.0" prefWidth="68.0" text="Hunted" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfsearch" layoutX="39.0" layoutY="121.0" prefHeight="35.0" prefWidth="197.0" promptText="Search..." style="-fx-background-radius: 20;" />
+      <Button fx:id="btnhunted" layoutX="250.0" layoutY="121.0" mnemonicParsing="false" onAction="#ajoutermurder" prefHeight="35.0" prefWidth="88.0" style="-fx-background-radius: 20; -fx-background-color: #80ddd7; -fx-text-fill: black;" text="Hunted" textFill="WHITE" />
+      <PieChart fx:id="mypiechart" layoutX="535.0" layoutY="198.0" prefHeight="266.0" prefWidth="319.0" />
+      <Button fx:id="btnp" layoutX="651.0" layoutY="121.0" mnemonicParsing="false" onAction="#PieChartSample" prefHeight="35.0" prefWidth="88.0" style="-fx-background-radius: 20; -fx-background-color: #f8e989;" text="Chart" />
+      <Label layoutX="39.0" layoutY="60.0" prefHeight="35.0" prefWidth="307.0" text="Animals" textFill="#e7e5e5">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

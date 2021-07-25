@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="UsersAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.UsersScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="576.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" width="794.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3476190476190476" startY="0.4238095238095238">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Pane prefHeight="576.0" prefWidth="794.0">
+         <children>
+            <TableView fx:id="TableUsers" layoutX="45.0" layoutY="149.0" prefHeight="317.0" prefWidth="705.0" style="-fx-background-radius: 1em;">
+               <columns>
+                  <TableColumn fx:id="FnameUser" prefWidth="149.0" text="First Name" />
+                  <TableColumn fx:id="LnameUser" minWidth="0.0" prefWidth="151.0" text="Last Name" />
+                  <TableColumn fx:id="PhoneUser" prefWidth="115.0" text="Phone" />
+                  <TableColumn fx:id="EmailUser" prefWidth="210.0" text="E-mail" />
+                  <TableColumn fx:id="StatutUser" prefWidth="106.0" text="Statut" />
+                  <TableColumn fx:id="IDUser" minWidth="4.0" prefWidth="11.0" style="-fx-background-color: #e7e5e5;" text="ID" />
+               </columns>
+            </TableView>
+            <TextField fx:id="SearchTermTextFiled" layoutX="469.0" layoutY="95.0" prefHeight="27.0" prefWidth="282.0" promptText="search .." style="-fx-background-radius: 2em;" />
+            <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="724.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Search_52px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ChangeButton" layoutX="610.0" layoutY="484.0" mnemonicParsing="false" onAction="#changeStatutUser" prefHeight="35.0" prefWidth="140.0" style="-fx-background-radius: 2em; -fx-background-color: #D90416;" text="Change Statut" textFill="#e7e5e5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="CheckButton" layoutX="460.0" layoutY="484.0" mnemonicParsing="false" onAction="#goCheckUserGroupScreen" prefHeight="35.0" prefWidth="140.0" style="-fx-background-radius: 2em; -fx-background-color: #80ddd7; -fx-text-fill: black;" text="Check Groups" textFill="#e7e5e5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="57.0" layoutY="64.0" text="Users" textFill="#e7e5e5">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

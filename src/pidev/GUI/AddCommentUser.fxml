@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.AddCommentUserController">
+   <children>
+      <TextField fx:id="tfNomAnnonce" editable="false" layoutX="46.0" layoutY="128.0" opacity="0.98" prefHeight="30.0" prefWidth="235.0" promptText="Announcement name.." style="-fx-background-radius: 20;" />
+      <TextArea fx:id="tfDescriptionAnnonce" editable="false" layoutX="40.0" layoutY="178.0" opacity="0.95" prefHeight="334.0" prefWidth="327.0" promptText="Express yourself !!!" style="-fx-background-radius: 20;" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="80.0" layoutY="56.0" prefHeight="35.0" prefWidth="307.0" text="Add Comment" textFill="#e7e5e5">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableCommentaires" layoutX="376.0" layoutY="129.0" prefHeight="200.0" prefWidth="392.0">
+        <columns>
+          <TableColumn fx:id="columnIdUser" prefWidth="75.0" text="User" />
+          <TableColumn fx:id="columnChampCommentaire" prefWidth="242.0" text="Comment" />
+            <TableColumn fx:id="columnDate" prefWidth="74.0" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="387.0" layoutY="345.0" prefHeight="24.0" prefWidth="156.0" text="Your Comment" textFill="#e7e5e5" />
+      <TextField fx:id="tfUserComment" layoutX="376.0" layoutY="376.0" prefHeight="69.0" prefWidth="392.0" />
+      <Button fx:id="btnAjouterCommentaire" layoutX="502.0" layoutY="457.0" mnemonicParsing="false" onAction="#AjouterCommentaire" opacity="0.91" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #80ddd7; -fx-text-fill: black; -fx-background-radius: 20;" text="Add" textAlignment="CENTER" textFill="#e7e5e5">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="idARS" layoutX="14.0" layoutY="14.0" />
+   </children>
+</AnchorPane>

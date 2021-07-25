@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.ShowGUScreenController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/showug.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="SearchTermTextFiled" blendMode="SRC_ATOP" layoutX="104.0" layoutY="54.0" opacity="0.8" prefHeight="30.0" prefWidth="280.0" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="26.0" layoutY="55.0" text="Search" textAlignment="CENTER" textFill="#011c26">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="refreshButton" layoutX="517.0" layoutY="51.0" mnemonicParsing="false" onAction="#refresh" prefHeight="35.0" prefWidth="69.0" style="-fx-background-radius: 20; -fx-background-color: #8c5c20;" text="Refresh" textFill="#e4f1f2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="DeleteButton" layoutX="322.0" layoutY="351.0" mnemonicParsing="false" onAction="#deleteGroup" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20; -fx-background-color: #378c8c;" text="Delete" textFill="#e4f1f2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="UpdateButton" layoutX="461.0" layoutY="351.0" mnemonicParsing="false" onAction="#updateGroup" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20; -fx-background-color: #378c8c;" text="Update" textFill="#e4f1f2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="Table" layoutX="123.0" layoutY="100.0" opacity="0.8" prefHeight="236.0" prefWidth="354.0">
+        <columns>
+          <TableColumn fx:id="IdGU" prefWidth="91.0" text="ID GU" />
+          <TableColumn fx:id="IdUser" prefWidth="133.0" text="ID User" />
+            <TableColumn fx:id="IdGroup" prefWidth="129.0" text="ID Group" />
+        </columns>
+      </TableView>
+      <Label fx:id="IDGroup" layoutX="26.0" layoutY="361.0" text="User ID" textFill="#011c26">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

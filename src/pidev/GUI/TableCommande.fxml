@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="588.0" maxWidth="793.0" prefHeight="588.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.TableCommandeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="640.0" layoutX="-13.0" layoutY="-16.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" width="866.0">
+         <fill>
+            <LinearGradient endX="0.780952380952381" endY="0.8714285714285716" startX="0.2761904761904762" startY="0.6476190476190475">
+               <stops>
+                  <Stop color="#2b1414" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TableView fx:id="tablevc" layoutX="94.0" layoutY="202.0" prefHeight="257.0" prefWidth="652.0">
+        <columns>
+            <TableColumn fx:id="colnumber" prefWidth="68.0" text="Number" />
+          <TableColumn fx:id="colproduit" prefWidth="150.0" text="Produit" />
+          <TableColumn fx:id="coldate" prefWidth="132.0" text="Date" />
+            <TableColumn fx:id="colclient" prefWidth="179.0" text="Client" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchc" layoutX="204.0" layoutY="156.0" prefHeight="29.0" prefWidth="172.0" promptText="Search..." style="-fx-background-radius: 20;" />
+      <Button fx:id="btndc" layoutX="437.0" layoutY="156.0" mnemonicParsing="false" opacity="0.91" prefHeight="29.0" prefWidth="140.0" style="-fx-background-color: #80ddd7; -fx-text-fill: black; -fx-background-radius: 20;" text="PDF" textAlignment="CENTER" textFill="#e7e5e5">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="77.0" layoutY="84.0" text="Orders Management" textFill="#e7e5e5">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

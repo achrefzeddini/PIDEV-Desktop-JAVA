@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.ChartPageController">
+   <children>
+      <BarChart fx:id="barchart1" layoutX="14.0" layoutY="59.0" prefHeight="268.0" prefWidth="339.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xaxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yaxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <AreaChart fx:id="areachart1" layoutX="385.0" layoutY="59.0" prefHeight="268.0" prefWidth="363.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xaxis1" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yaxis1" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Label layoutX="86.0" layoutY="353.0" text="chart for number of product for each user" />
+      <Label layoutX="474.0" layoutY="353.0" text="chart for value of price per product" />
+   </children>
+</AnchorPane>

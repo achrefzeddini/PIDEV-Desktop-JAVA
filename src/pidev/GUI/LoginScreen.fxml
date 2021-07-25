@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="350.0" style="-fx-background-color: #1A1A1A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.LoginScreenController">
+   <children>
+      <CubicCurve controlX1="-400.9310302734375" controlX2="-535.1935424804688" controlY1="25.704635620117188" controlY2="-511.44464111328125" endX="462.806396484375" endY="-550.4447021484375" layoutX="18.0" layoutY="479.0" opacity="0.37" startX="815.6935424804688" startY="353.94464111328125" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5904761904761905" startX="0.6238095238095238">
+               <stops>
+                  <Stop color="#401d1db8" />
+                  <Stop color="#1fffd1" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+         <stroke>
+            <RadialGradient centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="#461a1ab8" />
+                  <Stop color="#80606000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </CubicCurve>
+      <Label layoutX="66.0" layoutY="269.0" text="Login" textFill="#80ddd7">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LoginTextField" layoutX="50.0" layoutY="294.0" prefHeight="25.0" prefWidth="250.0" promptText="Enter your E-mail ..." style="-fx-background-color: #e7e5e5; -fx-background-radius: 2em;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="66.0" layoutY="334.0" text="Password" textFill="#80ddd7">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="PasswordTextField" layoutX="50.0" layoutY="359.0" prefHeight="25.0" prefWidth="250.0" promptText="Enter your password ..." style="-fx-background-radius: 2em; -fx-background-color: #e7e5e5;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="LoginButton" layoutX="50.0" layoutY="419.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 2em; -fx-background-color: #80ddd7;" text="Login" textFill="#1a1a1a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="SignUpButton" layoutX="180.0" layoutY="419.0" mnemonicParsing="false" onAction="#goSignUpScreen" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 2em; -fx-background-color: #B1B1B1;" text="Sign up">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Hyperlink fx:id="ForgotPasswordHyperling" layoutX="213.0" layoutY="389.0" onAction="#sendMailForgotPassword" text="Forgot password?" textFill="#f8e989">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="239.0" fitWidth="152.0" layoutX="99.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/e7e5e5.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

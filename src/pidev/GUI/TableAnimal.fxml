@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="588.0" maxWidth="865.0" prefHeight="569.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUI.TableAnimalController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="614.0" layoutX="-14.0" layoutY="-24.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" width="864.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.3619047619047619" startY="0.29523809523809524">
+               <stops>
+                  <Stop color="#2b1414" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TableView fx:id="tablev" layoutX="55.0" layoutY="252.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="245.0" prefWidth="574.0" style="-fx-background-radius: 20; -fx-background-color: efeaea; -fx-fixed-cell-size: 350px;">
+        <columns>
+            <TableColumn fx:id="coln" prefWidth="36.0" text="Ref" />
+          <TableColumn fx:id="colr" onEditCommit="#updateRace" prefWidth="61.0" text="Race" />
+          <TableColumn fx:id="cols" onEditCommit="#updateSeason" prefWidth="58.0" text="Season" />
+            <TableColumn fx:id="colp" minWidth="4.0" onEditCommit="#updatePlace" prefWidth="89.0" text="Place" />
+            <TableColumn fx:id="colpic" maxWidth="1.7976931348623157E308" minWidth="0.0" onEditCommit="#updatePlace" prefWidth="270.0" text="Picture" />
+            <TableColumn fx:id="colhunted" minWidth="4.0" prefWidth="59.0" text="Hunted" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfsearch" layoutX="173.0" layoutY="509.0" prefHeight="25.0" prefWidth="191.0" promptText="Search..." style="-fx-background-radius: 20;" />
+      <TextField fx:id="tfnumber" layoutX="55.0" layoutY="134.0" prefHeight="8.0" prefWidth="159.0" style="-fx-background-color: efeaea; -fx-background-radius: 20;" />
+      <TextField fx:id="tfrace" layoutX="238.0" layoutY="134.0" prefHeight="2.0" prefWidth="159.0" style="-fx-background-color: efeaea; -fx-background-radius: 20;" />
+      <TextField fx:id="tfseason" layoutX="55.0" layoutY="198.0" prefHeight="4.0" prefWidth="159.0" style="-fx-background-color: efeaea; -fx-background-radius: 20;" />
+      <TextField fx:id="tfplace" layoutX="238.0" layoutY="195.0" prefHeight="20.0" prefWidth="159.0" style="-fx-background-color: efeaea; -fx-background-radius: 20;" />
+      <TextField fx:id="tfimg" layoutX="416.0" layoutY="134.0" prefHeight="20.0" prefWidth="149.0" style="-fx-background-color: efeaea; -fx-background-radius: 20;" />
+      <Label layoutX="55.0" layoutY="110.0" text="Reference" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="238.0" layoutY="109.0" text="Race" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="170.0" text="Season" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="237.0" layoutY="170.0" text="Place" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="416.0" layoutY="109.0" text="Image" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="41.0" prefHeight="35.0" prefWidth="287.0" text="Animal Management" textFill="#e7e5e5">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnadd" layoutX="416.0" layoutY="190.0" mnemonicParsing="false" onAction="#addanimal" opacity="0.91" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #80ddd7; -fx-text-fill: black; -fx-background-radius: 20;" text="Add" textAlignment="CENTER" textFill="#e7e5e5">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btndel" layoutX="385.0" layoutY="508.0" mnemonicParsing="false" onAction="#deleteAnimal" opacity="0.91" prefHeight="20.0" prefWidth="123.0" style="-fx-background-color: #D90416; -fx-text-fill: white; -fx-background-radius: 20;" text="Delete" textAlignment="CENTER" textFill="#e7e5e5">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnhunted" layoutX="653.0" layoutY="343.0" mnemonicParsing="false" onAction="#ajoutermurder" prefHeight="20.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-text-fill: BLACK; -fx-background-color: #f8e989;" text="Hunted" />
+      <PieChart fx:id="mypiechart" layoutX="578.0" layoutY="35.0" prefHeight="190.0" prefWidth="218.0" />
+      <Button fx:id="btnp" layoutX="653.0" layoutY="300.0" mnemonicParsing="false" onAction="#PieChartSample" prefHeight="20.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-text-fill: white; -fx-background-color: #FF7F50;" text="Chart" />
+   </children>
+</AnchorPane>
